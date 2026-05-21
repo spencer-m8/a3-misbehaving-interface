@@ -21,12 +21,13 @@ window.onload = function() {
     const urlObj = new URL(window.location.href);
     if (urlObj.pathname = "index.html") {
         let stage = 0;
-        console.log("page load, stage:" + stage)
+        console.log("page load, stage:" + stage);
     }
 }
 
 document.addEventListener('keydown', (event) => {
     console.log(event);
+    console.log("keydown, stage:" + stage);
 })
 
 document.addEventListener('keydown', (event) => {
@@ -40,9 +41,9 @@ document.addEventListener('keydown', (event) => {
         stage = parseInt(first);
     }
 
-    console.log(stage);
     //using one js script for all of these pages, looping through
     if ((event.keyCode == 20)) {
+        console.log("capslock, stage: " + stage);
         stage += 1;
         //concat to create name
         //realizing this will only work up to 9 pages as is lol
@@ -50,6 +51,7 @@ document.addEventListener('keydown', (event) => {
 
         //https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
         window.location.pathname = newPage 
+        window.location.
     }
 })
 
