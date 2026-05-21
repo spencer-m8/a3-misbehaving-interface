@@ -17,17 +17,39 @@ function log(request) {
 }
     */
 
+window.onload = function() {
+    const urlObj = new URL(window.location.href);
+    if (urlObj.pathname = "index.html") {
+        let stage = 0;
+        console.log("page load, stage:" + stage)
+    }
+}
+
 document.addEventListener('keydown', (event) => {
     console.log(event);
 })
 
 document.addEventListener('keydown', (event) => {
     const urlObj = new URL(window.location.href);
-    console.log(urlObj.pathname);
-    
-    //using one js script for all of these
+
+    //raw first char of url
+    let first = urlObj.pathname.charAt[0];
+
+    //if stage is not a number it stays 0;
+    if (typeof first == 'number') {
+        stage = parseInt(first);
+    }
+
+    console.log(stage);
+    //using one js script for all of these pages, looping through
     if ((event.keyCode == 20)) {
-        console.log("yay")
+        stage += 1;
+        //concat to create name
+        //realizing this will only work up to 9 pages as is lol
+        let newPage = "" + stage + "page.html";
+
+        //https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
+        window.location.pathname = newPage 
     }
 })
 
