@@ -1,0 +1,55 @@
+#masthead-container {
+    width: auto;
+    margin-bottom: 0;
+    border-color: white;
+    margin: 0 auto .8333em;
+    border-bottom: 1px solid #ccc;
+}
+
+#masthead-container, #masthead {
+    width: 960px; 
+}
+
+#masthead {
+    margin: 0 auto;
+    padding: 0.69231em 0 0.38462em;
+    font-size: 1.0833em;
+}
+
+#masthead #logo {
+    display: block;
+    float: left;
+    margin: 0 18px 0 0;
+    width: 110px;
+    height: 54px;
+    background-position: 0 -643px;
+}
+
+.master-sprite,img.master-sprite,.master-sprite img {
+    background-color: transparent;
+    background-image: url(https://web.archive.org/web/20100505182613im_/http://s.ytimg.com/yt/img/master-vfl160969.png);
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    cursor: hand;
+    vertical-align: middle
+}
+
+.master-sprite::-moz-focus-inner {
+    border: 0
+}
+
+#masthead-search {
+    float: left;
+    padding: 0.15385em 0.23077em;
+    margin: 0.23077em 0 0 0;
+    line-height: 2.07692em;
+    white-space: nowrap;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px
+}
