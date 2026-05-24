@@ -10,30 +10,79 @@
 </head>
 
 
-<body> 
+<body>
     <!--first idea is the idea of never ending enter buttons, play now, etc-->
     <!--video player that is not a video player, the more I can rip from something the happier I am-->
     <!--pirating websites have play buttons hidden under a million ads, they are so janky to use-->
     <!--how do i make them worse-->
     <p>enter</p>
     <a href="./enter.html">enter</a>
-     
+
 
     <!--need a header with a couple things, title etc.-->
     <!--need a video player with  all the buttons that work, this is a good place to be at in an hour or so-->
     <!--then need to figure out the static site framework-->
-    <!--going to try and steal a video player--> 
+    <!--going to try and steal a video player-->
     <div id="page" class="watch">
         <div id="masthead-container">
-            <p>youtube</p>
         </div>
         <div id="masthead">
-			<img id="logo" class="master-sprite" src="https://web.archive.org/web/20100505183228im_/http://s.ytimg.com/yt/img/pixel-vfl73.gif" alt="YouTube home">
-		</a>
-        </div>
+            <img id="logo" class="master-sprite"
+                src="https://web.archive.org/web/20100505183228im_/http://s.ytimg.com/yt/img/pixel-vfl73.gif"
+                alt="YouTube home">
+            </a>
+        </div id="masthead-search">
 
+        <form autocomplete="off" class="search-form" action="/web/20100505183228/http://www.youtube.com/results"
+            method="get" name="searchForm" onsubmit="">
+            <input id="masthead-search-term" class="search-term" name="search_query" type="text" tabindex="1"
+                onkeyup="goog.i18n.bidi.setDirAttribute(event,this)" value="" maxlength="128"
+                onfocus="if (_addclass) { _addclass(this, 'search-term-focus'); }"
+                onblur="if (_removeclass) { _removeclass(this, 'search-term-focus'); }" autocomplete="off">
+
+
+
+            <button type="button" class=" yt-uix-button"
+                onclick="if (_gel('masthead-search-term').value != '') { document['searchForm'].submit(); }; return false;;return false;"
+                tabindex="2"><span class="yt-uix-button-content">Search</span></button>
+
+
+            <input type="hidden" name="aq" value="f"><input type="hidden" name="oq" value="" disabled="">
+        </form>
     </div>
-    </body>
+    
+    <div id="watch-headline-container">
+				<div id="watch-headline">
+
+		<h1 id="watch-headline-title">
+			<span class="" title="Me at the zoo">
+				Me at the zoo
+			</span>
+		</h1>
+
+		<div id="watch-headline-user-info">
+				<a id="watch-username" class="inline-block" href="/web/20100505183228/http://www.youtube.com/user/jawed"><strong>jawed</strong></a>
+			<span id="watch-video-count" class="watch-expander yt-uix-expander yt-uix-expander-collapsed" data-expander-action="yt.www.watch.watch5.handleToggleMoreFromUser">
+				<span class="watch-expander-head yt-uix-expander-head yt-rounded">
+					<button class="yt-uix-expander-arrow master-sprite" onclick="return false;"></button>
+7 videos
+				</span>
+			</span>
+			<button onclick="yt.www.watch.about.subscribeWatch5(yt.getConfig('VIDEO_USERNAME'), 'username', yt.getConfig('SUBSCRIBE_AXC'));;return false;" title="Click to be notified of new videos from this channel" type="button" class=" yt-uix-button yt-uix-tooltip" id="subscribeDiv"><span class="yt-uix-button-content">Subscribe</span></button>
+			<button type="button" class="hid yt-uix-button" onclick="yt.www.watch.about.editSubscription(yt.getConfig('VIDEO_USERNAME'), yt.getConfig('SUBSCRIBE_AXC'), 'alerts');;return false;" id="editSubscriptionDiv"><span class="yt-uix-button-content">Edit Subscription</span></button>
+
+		</div>
+		<div id="watch-more-from-user" class="collapsed">
+			<div id="watch-channel-discoverbox" class="yt-rounded">
+				<span id="watch-channel-loading">Loading...</span>
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+    </div>
+</body>
 
 
 

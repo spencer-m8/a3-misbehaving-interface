@@ -53,3 +53,102 @@
     -webkit-border-radius: 3px;
     border-radius: 3px
 }
+
+#masthead-qr {
+    float: left;
+    margin-top: 0.23077em;
+}
+
+#masthead-utility {
+    line-height: 3em;
+    text-align: right
+}
+
+#masthead-nav-main,#masthead-nav-user {
+    line-height: 1.53846em;
+    font-weight: bold
+}
+
+#masthead-nav-main {
+    padding-left: 0.23077em;
+    margin-top: 2px;
+}
+
+#masthead-nav-user {
+    float: right;
+    text-align: right
+}
+
+#masthead-nav-main a {
+    margin: 0 1em 0 0
+}
+
+#masthead-nav-user a {
+    margin: 0 0 0 1em
+}
+
+#masthead-end {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+}
+
+#masthead .search-form {
+    position: relative;
+}
+
+#masthead .search-term {
+    font-size: 100% !important;
+    border: 1px solid #999;
+    padding: 4px 1px 1px 1px;
+    width: 25em;
+    height: 1.38462em;
+    vertical-align: top
+}
+
+#masthead .search-term {
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border-color: #666
+}
+
+#masthead .search-term-focus {
+    border: 2px solid #bbdafd !important;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+#masthead .search-form .yt-button {
+    margin: .0833em 0;
+    font-size: 0.92308em;
+    vertical-align: top;
+    zoom:1;}
+
+#masthead .search-form .yt-menubutton button {
+    vertical-align: top
+}
+
+#masthead .search-form .yt-menubutton-menu {
+    top: 1.38462em;
+    left: 0;
+    line-height: 1
+}
+
+#masthead .search-form {
+    position: relative;
+}
+
+#page #masthead-search,#page #masthead-nav,#page #masthead-utility {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none
+}
+
+#page #masthead-nav,#page #masthead-utility {
+    line-height: 3.0769em;
+}
