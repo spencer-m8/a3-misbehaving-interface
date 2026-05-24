@@ -1,3 +1,7 @@
+div {
+    display: block;
+}
+
 #masthead-container {
     width: auto;
     margin-bottom: 0;
@@ -151,4 +155,102 @@
 
 #page #masthead-nav,#page #masthead-utility {
     line-height: 3.0769em;
+}
+
+#watch-headline-container {
+    background-color: #fff;
+    -webkit-transition: background-color 0.2s ease-in
+}
+
+#watch-headline,#watch-video,#watch-main {
+    width: 960px;
+    margin: 0 auto
+}
+
+#watch-video {
+    position: relative
+}
+
+#watch-panel {
+    width: 640px;
+    float: left;
+    padding-top: 10px
+}
+
+#watch-sidebar {
+    width: 320px;
+    float: right;
+    padding-top: 5px
+}
+
+#watch-headline {
+    width: 960px;
+    padding: 5px 0
+}
+
+#watch-headline h1 {
+    height: 23px;
+    max-height: 23px;
+    line-height: 23px;
+    margin: 0 0 5px;
+    font-size: 1.6666em;
+    color: #333;
+    overflow: hidden
+}
+
+#watch-headline h1 .long-title {
+    font-size: .9166em;
+    letter-spacing: -0.5px
+}
+
+#watch-headline-user-info {
+    height: 27px;
+    max-height: 27px;
+    line-height: 1.1;
+    font-size: 1.1666em;
+    overflow: hidden
+}
+
+#watch-username {
+    padding: 5px 0
+}
+
+#watch-userbanner:hover {
+    text-decoration: none
+}
+
+#watch-userbanner img {
+    vertical-align: middle
+}
+
+#watch-video-count {
+    margin: 0 3px
+}
+
+#watch-video-count .watch-expander-head {
+    display: inline-block;
+    padding: 3px 4px 4px;
+    vertical-align: middle
+}
+
+#watch-video-count .yt-uix-expander-arrow {
+    margin-left: 5px
+}
+
+#ie #watch-video-count .yt-uix-expander-arrow {
+    float: none;
+    margin: 0 5px 0 0
+}
+
+#page.watch #content {
+    width: auto;
+}
+
+#page.watch #masthead-container {
+    width: auto;
+    margin-bottom: 0;
+}
+
+#content {
+    margin: 0 auto;
 }

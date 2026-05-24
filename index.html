@@ -49,38 +49,45 @@
 
             <input type="hidden" name="aq" value="f"><input type="hidden" name="oq" value="" disabled="">
         </form>
-    </div>
-    
-    <div id="watch-headline-container">
-				<div id="watch-headline">
+        <div id="content">
+            <div id="watch-headline-container">
+                <div id="watch-headline">
+                    <h1 id="watch-headline-title">
+                        <span class="" title="Me at the zoo">
+                            Me at the zoo
+                        </span>
+                    </h1>
 
-		<h1 id="watch-headline-title">
-			<span class="" title="Me at the zoo">
-				Me at the zoo
-			</span>
-		</h1>
+                    <div id="watch-headline-user-info">
+                        <a id="watch-username" class="inline-block"
+                            href="/web/20100505183228/http://www.youtube.com/user/jawed"><strong>jawed</strong></a>
+                        <span id="watch-video-count" class="watch-expander yt-uix-expander yt-uix-expander-collapsed"
+                            data-expander-action="yt.www.watch.watch5.handleToggleMoreFromUser">
+                            <span class="watch-expander-head yt-uix-expander-head yt-rounded">
+                                <button class="yt-uix-expander-arrow master-sprite" onclick="return false;"></button>
+                                7 videos
+                            </span>
+                        </span>
+                        <button
+                            onclick="yt.www.watch.about.subscribeWatch5(yt.getConfig('VIDEO_USERNAME'), 'username', yt.getConfig('SUBSCRIBE_AXC'));;return false;"
+                            title="Click to be notified of new videos from this channel" type="button"
+                            class=" yt-uix-button yt-uix-tooltip" id="subscribeDiv"><span
+                                class="yt-uix-button-content">Subscribe</span></button>
+                        <button type="button" class="hid yt-uix-button"
+                            onclick="yt.www.watch.about.editSubscription(yt.getConfig('VIDEO_USERNAME'), yt.getConfig('SUBSCRIBE_AXC'), 'alerts');;return false;"
+                            id="editSubscriptionDiv"><span class="yt-uix-button-content">Edit
+                                Subscription</span></button>
 
-		<div id="watch-headline-user-info">
-				<a id="watch-username" class="inline-block" href="/web/20100505183228/http://www.youtube.com/user/jawed"><strong>jawed</strong></a>
-			<span id="watch-video-count" class="watch-expander yt-uix-expander yt-uix-expander-collapsed" data-expander-action="yt.www.watch.watch5.handleToggleMoreFromUser">
-				<span class="watch-expander-head yt-uix-expander-head yt-rounded">
-					<button class="yt-uix-expander-arrow master-sprite" onclick="return false;"></button>
-7 videos
-				</span>
-			</span>
-			<button onclick="yt.www.watch.about.subscribeWatch5(yt.getConfig('VIDEO_USERNAME'), 'username', yt.getConfig('SUBSCRIBE_AXC'));;return false;" title="Click to be notified of new videos from this channel" type="button" class=" yt-uix-button yt-uix-tooltip" id="subscribeDiv"><span class="yt-uix-button-content">Subscribe</span></button>
-			<button type="button" class="hid yt-uix-button" onclick="yt.www.watch.about.editSubscription(yt.getConfig('VIDEO_USERNAME'), yt.getConfig('SUBSCRIBE_AXC'), 'alerts');;return false;" id="editSubscriptionDiv"><span class="yt-uix-button-content">Edit Subscription</span></button>
+                    </div>
+                    <div id="watch-more-from-user" class="collapsed">
+                        <div id="watch-channel-discoverbox" class="yt-rounded">
+                            <span id="watch-channel-loading">Loading...</span>
+                        </div>
+                    </div>
 
-		</div>
-		<div id="watch-more-from-user" class="collapsed">
-			<div id="watch-channel-discoverbox" class="yt-rounded">
-				<span id="watch-channel-loading">Loading...</span>
-			</div>
-		</div>
-
-	</div>
-
-	</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
