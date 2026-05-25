@@ -34,23 +34,8 @@
                 alt="YouTube home">
             </a>
         </div id="masthead-search">
-
-        <form autocomplete="off" class="search-form" action="/web/20100505183228/http://www.youtube.com/results"
-            method="get" name="searchForm" onsubmit="">
-            <input id="masthead-search-term" class="search-term" name="search_query" type="text" tabindex="1"
-                onkeyup="goog.i18n.bidi.setDirAttribute(event,this)" value="" maxlength="128"
-                onfocus="if (_addclass) { _addclass(this, 'search-term-focus'); }"
-                onblur="if (_removeclass) { _removeclass(this, 'search-term-focus'); }" autocomplete="off">
-
-
-
-            <button type="button" class=" yt-uix-button"
-                onclick="if (_gel('masthead-search-term').value != '') { document['searchForm'].submit(); }; return false;;return false;"
-                tabindex="2"><span class="yt-uix-button-content">Search</span></button>
-
-
-            <input type="hidden" name="aq" value="f"><input type="hidden" name="oq" value="" disabled="">
-        </form>
+        <input id="masthead-search-term">
+        <button type="button" class=" yt-uix-button" id="searchButton">Search</button>
         <div id="extra-space">
             <p> hello</p>
         </div>
@@ -62,25 +47,17 @@
                             Me at the zoo
                         </span>
                     </h1>
-
                     <div id="watch-headline-user-info">
                         <a id="watch-username" class="inline-block"
                             href="/web/20100505183228/http://www.youtube.com/user/jawed"><strong>jawed</strong></a>
-                        <span id="watch-video-count" class="watch-expander yt-uix-expander yt-uix-expander-collapsed"
-                            data-expander-action="yt.www.watch.watch5.handleToggleMoreFromUser">
+                        <span id="watch-video-count" class="watch-expander yt-uix-expander yt-uix-expander-collapsed">
                             <span class="watch-expander-head yt-uix-expander-head yt-rounded">
                                 <button class="yt-uix-expander-arrow master-sprite" onclick="return false;"></button>
                                 7 videos
                             </span>
                         </span>
-                        <button
-                            onclick="yt.www.watch.about.subscribeWatch5(yt.getConfig('VIDEO_USERNAME'), 'username', yt.getConfig('SUBSCRIBE_AXC'));;return false;"
-                            title="Click to be notified of new videos from this channel" type="button"
-                            class=" yt-uix-button yt-uix-tooltip" id="subscribeDiv"><span
-                                class="yt-uix-button-content">Subscribe</span></button>
-                        <button type="button" class="hid yt-uix-button"
-                            onclick="yt.www.watch.about.editSubscription(yt.getConfig('VIDEO_USERNAME'), yt.getConfig('SUBSCRIBE_AXC'), 'alerts');;return false;"
-                            id="editSubscriptionDiv"><span class="yt-uix-button-content">Edit
+                        <button id="subscribeButton">Subscribe</span></button>
+                        <button type="button" class="hid yt-uix-button" id="editSubscriptionButton">Edit
                                 Subscription</span></button>
 
                     </div>
@@ -88,8 +65,7 @@
             </div>
             <div id="watch-video-container">
                 <div id="watch-video" class=" " style="z-index: 1000;">
-                    <div id="watch-player" class="flash-player wm-videoplayer"
-                        style="display: flex; flex-direction: column;">
+                    <div id="watch-player">
                         <video autoplay="" controls="" style="width: 100%;"
                             src=""></video>
                     </div>
@@ -100,7 +76,7 @@
         </div>
     </div>
 </body>
-
+<!--need to see how to use the video player buttons in a weird way-->
 
 
 </html>
