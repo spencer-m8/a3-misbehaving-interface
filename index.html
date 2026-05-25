@@ -15,8 +15,10 @@
     <!--video player that is not a video player, the more I can rip from something the happier I am-->
     <!--pirating websites have play buttons hidden under a million ads, they are so janky to use-->
     <!--how do i make them worse-->
-    <p>enter</p>
-    <a href="./enter.html">enter</a>
+
+
+    <!--<p>enter</p>
+    <a href="./enter.html">enter</a>-->
 
 
     <!--need a header with a couple things, title etc.-->
@@ -49,6 +51,9 @@
 
             <input type="hidden" name="aq" value="f"><input type="hidden" name="oq" value="" disabled="">
         </form>
+        <div id="extra-space">
+            <p> hello</p>
+        </div>
         <div id="content">
             <div id="watch-headline-container">
                 <div id="watch-headline">
@@ -79,12 +84,17 @@
                                 Subscription</span></button>
 
                     </div>
-                    <div id="watch-more-from-user" class="collapsed">
-                        <div id="watch-channel-discoverbox" class="yt-rounded">
-                            <span id="watch-channel-loading">Loading...</span>
-                        </div>
+                </div>
+            </div>
+            <div id="watch-video-container">
+                <div id="watch-video" class=" " style="z-index: 1000;">
+                    <div id="watch-player" class="flash-player wm-videoplayer"
+                        style="display: flex; flex-direction: column;">
+                        <video autoplay="" controls="" style="width: 100%;"
+                            src=""></video>
                     </div>
-
+                    <!-- begin videoextra section -->
+                    <!-- end videoextra section -->
                 </div>
             </div>
         </div>

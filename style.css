@@ -254,3 +254,55 @@ div {
 #content {
     margin: 0 auto;
 }
+
+
+#watch-video-container {
+    background-color: #fff;
+    -webkit-transition: background-color 0.2s ease-in;
+    zoom:1}
+
+    #watch-video {
+    position: relative
+}
+
+#watch-panel {
+    width: 640px;
+    float: left;
+    padding-top: 10px
+}
+
+#content.watch-wide #watch-video-container {
+    background-color: #eaeaea
+}
+
+#watch-player {
+    position: relative;
+    width: 640px;
+    height: 385px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-transition: width,height 0.2s ease-in-out
+}
+
+#watch-player object,#watch-player embed {
+    position: relative;
+    width: 100%!important;
+    height: 100%!important
+}
+
+#page.player-new-ui #watch-player {
+    height: 391px;
+}
+
+/*########################################################
+##########################################################
+Divider for my own classes vs. youtube copies
+##########################################################
+##########################################################*/
+
+#extra-space{
+    color: white;
+}
