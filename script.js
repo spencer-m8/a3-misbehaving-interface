@@ -17,16 +17,15 @@ searchBox.addEventListener('input', async () => {
 });
 
 searchBtn.addEventListener('click', async () => {
-            const canvas = await html2canvas(searchBtn);
-            searchBtn.appendChild(canvas);
-            timesResized++;
+        const canvas = await html2canvas(searchBtn);
+        searchBtn.appendChild(canvas);
+        timesResized++;
             console.log(timesResized);
 
             if (timesResized > 10) {
                 alert("Search complete.")
                 window.open("./enter.html")
-            }
+                searchBtn.innerHTML('');
+        }
 });
-
-
 
