@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>misbehaving interface</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class = "page_container">
-    <p style="float: left;">Page: <form id="number_input">
-        <input type="text" id="page_input" placeholder="#">
-    </form></p>
-        <img src="page1.jpg">
-        <button id="page_up">
+
+<body onload="load()">
+    <div id="page_container">
+        <p style="float: left;">Page:
+        <form id="number_input">
+            <input type="text" id="page_input" placeholder="#">
+        </form>
+        </p>
+        <div id="img_container">
+            <img src="page1.jpg" id="img">
+        </div>
+        <button id="page_up_button">
             Page Up
         </button>
-        <button id="page_down">
-            Page Down 
+        <button id="page_down_button">
+            Page Down
         </button>
         <!--navigate dropdown-->
-        <button id="go">
-        <!--go to page button that is covered by it-->
+        <button id="go_button">
+            <!--go to page button that is covered by it-->
         </button>
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>

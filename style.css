@@ -2,8 +2,8 @@ div {
     display: block;
 }
 
-fake_input {
-    width: 2ch;
+input[type="text"] {
+    width: 3ch;
 }
 
 page_container {
