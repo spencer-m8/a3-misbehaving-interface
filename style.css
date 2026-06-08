@@ -20,7 +20,10 @@ page_item {
     overflow-y: scroll;
 }
 
-
+body {
+    width: 100%;
+    transform-origin: bottom right 60px;
+}
 
 /*
 these were here to add a custom scroll bar but made page reset not work

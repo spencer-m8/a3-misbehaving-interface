@@ -2,6 +2,9 @@ let randomPage;
 let oldNum;
 let offset = 0;
 let count = 0;
+let annoyingCount = 0;
+let scrollBad = false;
+let annoying = false;
 
 const pageInput = document.getElementById("page_input");
 const pageInputForm = document.getElementById("number_input");
@@ -12,7 +15,6 @@ const pageContainer = document.getElementById("page_container");
 
 function load() {
     pageDown.disabled = true;
-
 }
 
 pageInput.addEventListener('keydown', function (event) {
@@ -45,10 +47,50 @@ pageUp.addEventListener('click', () => {
     }
 });
 
+
+
+var canvas;
+
 pageDown.addEventListener('click', async () => {
-    const canvas = await html2canvas();
-    document.body.innerHTML= '';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    //document.body.appendChild(canvas);
+    scrollBad = true;
+    canvas = await html2canvas(pageContainer);
+    canvas.style.transform = `rotate(180deg)`;
+    pageContainer.innerHTML= '';
+    pageContainer.appendChild(canvas);
+    //canvas.width = window.innerWidth;
+    //canvas.height = window.innerHeight;
 });
+
+window.addEventListener('scroll', () => {
+    if (scrollBad) {
+        if (window.scrollY < 10000) {
+            document.body.style.zoom = window.scrollY * 10;
+        }
+
+        if (window.pageYOffset >= 10000000) {
+            document.body.style.zoom = 1;
+            pageContainer.innerHTML= '';
+            pageContainer.appendChild(canvas);
+            scrollBad = false;
+            annoying = true;
+            popup();
+        }
+    } 
+
+    if (annoying && (annoyingCount < 5)) {
+        popup();
+        annoyingCount++;
+    } else if (annoying) {
+        popupHome();
+    }
+});
+
+function popup() {
+    window.prompt("Go to page: ", "#"); 
+    annoyingCount++;
+}
+
+function popup() {
+    window.prompt("Go to page: ", "#"); 
+    window.location.href = "error on my part - VISA-2P61-D03-S01-LL.html";
+}
