@@ -1,31 +1,19 @@
-const searchBtn = document.getElementById("searchButton");
-const searchBox = document.getElementById("masthead-search-term");
+let randomPage;
+let oldNum
 
-let timesResized = 0;
+const pageInput = document.getElementById("page_input");
+const pageInputForm = document.getElementById("number_input");
 
-searchBox.addEventListener('input', async () => {
-    //want to resize the screenshot thing by the length of this
-    const crop = 10+ searchBox.value.length * 4;
-    const croppedCanvas = document.createElement('canvas');
-    croppedCanvas.width = crop;
-    croppedCanvas.height = crop;
-    const ctx = croppedCanvas.getContext('2d');
-    const canvas = await html2canvas(searchBtn);
-    ctx.drawImage(canvas, crop, crop, crop, crop, 0, 0, crop, crop);
-    searchBtn.replaceChildren(canvas);
-    timesResized++;
+pageInput.addEventListener('keydown', function (event) {
+    console.log(event.key)
+    newNum = this.value;
+    if ((event.key === 'Enter') && (newNum != oldNum)) {
+        randomPage = Math.floor(Math.random() * (500 - 23 + 1)) + 23;
+        this.value = "" + randomPage;
+        oldNum = this.value;
+    }
 });
 
-searchBtn.addEventListener('click', async () => {
-        const canvas = await html2canvas(searchBtn);
-        searchBtn.appendChild(canvas);
-        timesResized++;
-            console.log(timesResized);
-
-            if (timesResized > 10) {
-                alert("Search complete.")
-                window.open("./enter.html")
-                searchBtn.innerHTML('');
-        }
+pageInputForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 });
-
