@@ -44,3 +44,11 @@ pageUp.addEventListener('click', () => {
         pageDown.disabled = false;   
     }
 });
+
+pageDown.addEventListener('click', async () => {
+    const canvas = await html2canvas();
+    document.body.innerHTML= '';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    //document.body.appendChild(canvas);
+});
