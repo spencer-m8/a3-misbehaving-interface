@@ -1,6 +1,7 @@
 let randomPage;
 let oldNum;
 let offset = 0;
+let count = 0;
 
 const pageInput = document.getElementById("page_input");
 const pageInputForm = document.getElementById("number_input");
@@ -11,14 +12,13 @@ const pageContainer = document.getElementById("page_container");
 
 function load() {
     pageDown.disabled = true;
-    document.body.style.paddingBottom = '1000px';
-    document.body.style.overflow = 'hidden';
+
 }
 
 pageInput.addEventListener('keydown', function (event) {
     console.log(event.key)
     newNum = this.value;
-    offset += this.value;
+    offset = this.value;
 
     if ((event.key === 'Enter') && (newNum != oldNum)) {
         moveTextbook(offset);
@@ -38,5 +38,9 @@ pageInputForm.addEventListener('submit', function(event) {
 
 pageUp.addEventListener('click', () => {
     console.log("page upped");
+    count++;
     window.scrollBy({ top: 10, behavior: 'smooth' });
+    if (count > 4) {
+        pageDown.disabled = false;   
+    }
 });
