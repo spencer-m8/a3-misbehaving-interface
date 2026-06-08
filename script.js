@@ -11,7 +11,8 @@ const pageContainer = document.getElementById("page_container");
 
 function load() {
     pageDown.disabled = true;
-    document.body.style.paddingBottom = '1000000px';
+    document.body.style.paddingBottom = '1000px';
+    document.body.style.overflow = 'hidden';
 }
 
 pageInput.addEventListener('keydown', function (event) {
