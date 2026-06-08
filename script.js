@@ -5,6 +5,7 @@ let count = 0;
 let annoyingCount = 0;
 let scrollBad = false;
 let annoying = false;
+let after = false;
 
 const pageInput = document.getElementById("page_input");
 const pageInputForm = document.getElementById("number_input");
@@ -73,24 +74,27 @@ window.addEventListener('scroll', () => {
             pageContainer.appendChild(canvas);
             scrollBad = false;
             annoying = true;
-            popup();
+            after = true;
         }
-    } 
-
-    if (annoying && (annoyingCount < 5)) {
+    }
+           
+    if (after && annoying) {
         popup();
-        annoyingCount++;
-    } else if (annoying) {
+    } else if (after && !annoying) {
         popupHome();
     }
 });
 
 function popup() {
-    window.prompt("Go to page: ", "#"); 
-    annoyingCount++;
+    annoyingCount = window.prompt("Go to page: ", "#"); 
+    console.log("popup")
+    if (annoyingCount > 100) {
+        annoying = false;
+    }
 }
 
-function popup() {
+function popupHome() {
     window.prompt("Go to page: ", "#"); 
-    window.location.href = "error on my part - VISA-2P61-D03-S01-LL.html";
+    window.location.href = "index.html";
+    console.log("popup home")
 }
